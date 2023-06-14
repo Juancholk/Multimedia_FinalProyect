@@ -21,7 +21,7 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);
   int score;
 
   int size_x = 3;
-  int size_y = 6;
+  int size_y = 10;
 
   int last[3];
 
@@ -53,9 +53,9 @@ Adafruit_PCD8544 display = Adafruit_PCD8544(7, 6, 5, 4, 3);
     i++;
 
     if(a > 1000)
-      return 1;
+      return 2.5;
     else if(a <= 1000 && last[0] < 1000 && last[1] < 1000 && last[2] < 1000)
-      return -1;
+      return -2.5;
   }
 
   int get_speed()
